@@ -122,7 +122,7 @@
     <p >物價表</p>
 </div>
 <div class="background_color">
-    <!-- action="http://localhost:3000" 連接到資料庫-->
+    <!-- action="http://localhost:3000" 連接到資料庫，http://localhost:3000/api-->
     <form id="prices" action="http://localhost:3000/api" method="post" >
         <fieldset class="MdFormGroup01">
             <div>
@@ -194,9 +194,9 @@
             const data = await response.json();
 
             // 在這裡處理回應資料，例如顯示成功訊息或更新頁面內容
-            console.log("成功", data);
+            console.log("成功", index);
             const log = document.getElementById('log');
-            log.innerHTML = JSON.stringify(data);
+            log.innerHTML = JSON.stringify(index);
 
         } catch (error) {
             // 在這裡處理錯誤，例如顯示錯誤訊息或者回滾操作
@@ -214,7 +214,7 @@
         },
         methods: {
             async handleClick() {
-                console.log("data");
+                console.log("index.html");
 
                 const url = "http://localhost:3000/api"; // 資料傳送到的 URL
                 try {
